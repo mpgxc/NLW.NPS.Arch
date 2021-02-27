@@ -1,5 +1,5 @@
-import { User } from '../Domain/User/Entities';
-import { RegisterUserDTO } from '../UseCases/RegisterUser/RegisterUserDTO';
+import { RegisterUserDTO } from '@Modules/Accounts/UseCases/RegisterUser/RegisterUserDTO';
+import { User } from '@Modules/Accounts/Domain/User/Entities';
 
 export interface IUserRepository {
   findByEmail(email: string): Promise<User>;
