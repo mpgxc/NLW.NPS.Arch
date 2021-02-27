@@ -1,0 +1,2 @@
+class Generic {}
+export { Generic };
