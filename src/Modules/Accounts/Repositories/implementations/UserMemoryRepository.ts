@@ -1,4 +1,5 @@
-import { User } from '../../Domain/User/Entities';
+import { User } from '@Modules/Accounts/Domain/User/Entities';
+
 import { IUserRepository } from '../IUserRepository';
 
 class UserMemoryRepository implements IUserRepository {

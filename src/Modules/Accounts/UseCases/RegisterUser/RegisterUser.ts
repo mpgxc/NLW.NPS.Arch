@@ -1,6 +1,6 @@
-import { IUserRepository } from '../../Repositories';
+import { User } from '@Modules/Accounts/Domain/User/Entities';
+import { IUserRepository } from '@Modules/Accounts/Repositories';
 import { RegisterUserDTO } from './RegisterUserDTO';
-import { User } from '../../Domain/User/Entities';
 
 class RegisterUser {
   constructor(private userRepository: IUserRepository) {}

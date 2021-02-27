@@ -1,7 +1,7 @@
 import { getRepository, Repository } from 'typeorm';
-import { User } from '../../Domain/User/Entities';
+import { RegisterUserDTO } from '@Modules/Accounts/UseCases/RegisterUser/RegisterUserDTO';
+import { User } from '@Modules/Accounts/Domain/User/Entities';
 import { IUserRepository } from '../IUserRepository';
-import { RegisterUserDTO } from '../../UseCases/RegisterUser/RegisterUserDTO';
 
 class UserRepository implements IUserRepository {
   private ormRepository: Repository<User>;
