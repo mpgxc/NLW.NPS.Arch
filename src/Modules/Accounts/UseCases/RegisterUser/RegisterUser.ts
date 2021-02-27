@@ -1,4 +1,4 @@
-import { User } from '@Modules/Accounts/Domain/User/Entities';
+import { User } from '@Modules/Accounts/Domain/User/Entity';
 import { IUserRepository } from '@Modules/Accounts/Repositories';
 import { RegisterUserDTO } from './RegisterUserDTO';
 

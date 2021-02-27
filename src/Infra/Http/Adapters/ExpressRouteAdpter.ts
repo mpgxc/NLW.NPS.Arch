@@ -6,7 +6,7 @@ export function AdpterRoutes(CtxController) {
 
     const controller = CtxController();
 
-    const httpResponse = await controller.create(requestData);
+    const httpResponse = await controller.handle(requestData);
 
     return response.status(httpResponse.statusCode).json(httpResponse.body);
   };
