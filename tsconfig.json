@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "emitDecoratorMetadata":true,
+    "emitDecoratorMetadata": true,
     "target": "es2017",
     "module": "commonjs",
     "allowJs": true,
     "lib": ["es6"],
     "outDir": "./dist",
-    // "rootDir": "./src",
-    // "baseUrl": "./",
+    "rootDir": ".",
     "removeComments": true,
     "strict": false,
     "esModuleInterop": true,
@@ -15,9 +14,12 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    // "paths": {
-    //   "@src/*": ["./src/*"]
-    // }
+    "baseUrl": "./src",
+    "paths": {
+      "@Modules/*": ["Modules/*"],
+      "@Core/*": ["Core/*"],
+      "@Infra/*": ["Infra/*"]
+    }
   },
   "include": ["./src/**/*.ts"],
   "exclude": ["node_modules"]
