@@ -1,0 +1,13 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5435,
+  "username": "postgres",
+  "password": "postgres",
+  "database": "nlw-nodejs",
+  "entities": ["./src/Modules/**/Entities/*.ts"],
+  "migrations": ["./src/Infra/Database/Migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/Infra/Database/Migrations"
+  }
+}
