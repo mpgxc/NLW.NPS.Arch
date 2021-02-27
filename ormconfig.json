@@ -5,7 +5,7 @@
   "username": "postgres",
   "password": "postgres",
   "database": "nlw-nodejs",
-  "entities": ["./src/Modules/**/Entities/*.ts"],
+  "entities": ["./src/Modules/**/Domain/**/Entities/*.ts"],
   "migrations": ["./src/Infra/Database/Migrations/*.ts"],
   "cli": {
     "migrationsDir": "./src/Infra/Database/Migrations"

@@ -1,18 +1,22 @@
-import { Request, Response } from 'express';
-import { User } from '../../Domain/User/Entities/Users';
-import { UserRepository } from '../../Repositories';
+import { RegisterUser } from './RegisterUser';
+import { RegisterUserDTO } from './RegisterUserDTO';
+
+type HttpResponse = {
+  statusCode: number;
+  body: unknown;
+};
 
 class RegisterUserController {
-  async create(request: Request, response: Response): Promise<Response> {
-    const userRepository = new UserRepository();
+  constructor(private registerUser: RegisterUser) {}
 
-    const myUser = new User();
-    myUser.email = 'mpgx5.c@gmail.com';
-    myUser.name = 'Mateus';
+  async create({ name, email }: RegisterUserDTO): Promise<HttpResponse> {
+    if (!name || !email) {
+      return { statusCode: 400, body: { message: 'Email ou Name inválidos!' } };
+    }
 
-    const user = await userRepository.create(myUser);
+    const user = await this.registerUser.execute({ name, email });
 
-    return response.status(201).json(user);
+    return { statusCode: 201, body: user };
   }
 }
 

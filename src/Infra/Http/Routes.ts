@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { RegisterUserController } from '../../Modules/Accounts/UseCases/RegisterUser/RegisterUserController';
+import { MakeRegisterUserController } from './Factories/Controllers/RegisterUserControllerFactory';
+import { AdpterRoutes } from './Adapters/ExpressRouteAdpter';
 
 const router = Router();
-const registerUserController = new RegisterUserController();
 
-router.post('/users', registerUserController.create);
+router.post('/users', AdpterRoutes(MakeRegisterUserController));
 
 export { router };

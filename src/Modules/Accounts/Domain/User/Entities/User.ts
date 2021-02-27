@@ -1,11 +1,18 @@
 /* eslint-disable camelcase */
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  PrimaryColumn,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import { v4 as uuid } from 'uuid';
 
 @Entity('users')
 class User {
-  @PrimaryColumn()
-  readonly id: string;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column()
   name: string;
@@ -14,10 +21,10 @@ class User {
   email: string;
 
   @CreateDateColumn()
-  created_at: string;
+  created_at: Date;
 
-  @CreateDateColumn()
-  updated_at: string;
+  @UpdateDateColumn()
+  updated_at: Date;
 
   constructor() {
     if (!this.id) {

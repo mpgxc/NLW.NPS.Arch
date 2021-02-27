@@ -6,8 +6,8 @@
     "allowJs": true,
     "lib": ["es6"],
     "outDir": "./dist",
-    "rootDir": "./src",
-    "baseUrl": "./",
+    // "rootDir": "./src",
+    // "baseUrl": "./",
     "removeComments": true,
     "strict": false,
     "esModuleInterop": true,
@@ -15,9 +15,9 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "paths": {
-      "@src/*": ["./src/*"]
-    }
+    // "paths": {
+    //   "@src/*": ["./src/*"]
+    // }
   },
   "include": ["./src/**/*.ts"],
   "exclude": ["node_modules"]
