@@ -1,6 +1,7 @@
 import { getRepository, Repository } from 'typeorm';
-import { User } from '../../Domain/User/Entities/Users';
+import { User } from '../../Domain/User/Entities';
 import { IUserRepository } from '../IUserRepository';
+import { RegisterUserDTO } from '../../UseCases/RegisterUser/RegisterUserDTO';
 
 class UserRepository implements IUserRepository {
   private ormRepository: Repository<User>;
@@ -9,10 +10,10 @@ class UserRepository implements IUserRepository {
     this.ormRepository = getRepository(User);
   }
 
-  async create(user: User): Promise<User> {
-    const userCreated = await this.ormRepository.save(user);
+  async create({ email, name }: RegisterUserDTO): Promise<User> {
+    const userCreated = this.ormRepository.create({ email, name });
 
-    return userCreated;
+    return this.ormRepository.save(userCreated);
   }
 
   async findByEmail(email: string): Promise<User> {

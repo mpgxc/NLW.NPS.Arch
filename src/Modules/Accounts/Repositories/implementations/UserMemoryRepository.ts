@@ -1,7 +1,7 @@
-import { User } from '../../Domain/User/Entities/Users';
+import { User } from '../../Domain/User/Entities';
 import { IUserRepository } from '../IUserRepository';
 
-class UserRepository implements IUserRepository {
+class UserMemoryRepository implements IUserRepository {
   private ormRepository: User[];
 
   constructor() {
@@ -37,4 +37,4 @@ class UserRepository implements IUserRepository {
   }
 }
 
-export { UserRepository };
+export { UserMemoryRepository };

@@ -1,9 +1,10 @@
+import 'reflect-metadata';
 import express from 'express';
 import 'express-async-errors';
 import morgan from 'morgan';
-import 'reflect-metadata';
-import '../Database';
 import { router } from './Routes';
+
+import '../Database';
 
 const app = express();
 
