@@ -1,0 +1,2 @@
+class Middleware {}
+export { Middleware };
