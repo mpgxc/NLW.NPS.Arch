@@ -1,10 +1,6 @@
+import { HttpResponse } from '@Core/HttpResponse';
 import { RegisterSurveyDTO } from './RegisterSurveyDTO';
 import { RegisterSurvey } from './RegisterSurvey';
-
-type HttpResponse = {
-  statusCode: number;
-  body: unknown;
-};
 
 class RegisterSurveyController {
   constructor(private readonly registerSurvey: RegisterSurvey) {}

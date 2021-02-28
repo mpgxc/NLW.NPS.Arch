@@ -1,6 +1,8 @@
 import { SurveyRepository } from '@Modules/Surveys/Repositories';
-import { RegisterSurvey } from '@Modules/Surveys/UseCases/RegisterSurvey/RegisterSurvey';
-import { RegisterSurveyController } from '@Modules/Surveys/UseCases/RegisterSurvey/RegisterSurveyController';
+import {
+  RegisterSurvey,
+  RegisterSurveyController,
+} from '@Modules/Surveys/UseCases/RegisterSurvey';
 
 export function MakeRegisterSurveyController(): RegisterSurveyController {
   const surveyRepository = new SurveyRepository();

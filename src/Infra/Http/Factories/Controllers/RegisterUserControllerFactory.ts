@@ -1,6 +1,8 @@
 import { UserRepository } from '@Modules/Accounts/Repositories';
-import { RegisterUser } from '@Modules/Accounts/UseCases/RegisterUser/RegisterUser';
-import { RegisterUserController } from '@Modules/Accounts/UseCases/RegisterUser/RegisterUserController';
+import {
+  RegisterUserController,
+  RegisterUser,
+} from '@Modules/Accounts/UseCases/RegisterUser';
 
 export function MakeRegisterUserController(): RegisterUserController {
   const userRepository = new UserRepository();

@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { MakeRegisterUserController } from '../Factories/Controllers/RegisterUserControllerFactory';
-import { AdpterRoutes } from '../Adapters/ExpressRouteAdpter';
+import { MakeRegisterUserController } from '../Factories/Controllers';
+import { AdpterRoutes } from '../Adapters/ExpressRouteAdapter';
 
 const userRouter = Router();
 
