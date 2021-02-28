@@ -1,5 +1,5 @@
 import { getRepository, Repository } from 'typeorm';
-import { RegisterSurveyDTO } from '@Modules/Surveys/UseCases/RegisterSurvey/RegisterSurveyDTO';
+import { RegisterSurveyDTO } from '@Modules/Surveys/UseCases/RegisterSurvey';
 import { Survey } from '@Modules/Surveys/Domain/Survey/Entity';
 import { ISurveyRepository } from '../ISurveyRepository';
 
@@ -14,6 +14,12 @@ class SurveyRepository implements ISurveyRepository {
     const surveyCreated = this.ormRepository.create({ title, description });
 
     return this.ormRepository.save(surveyCreated);
+  }
+
+  async findAll(): Promise<Survey[]> {
+    const surveys = await this.ormRepository.find();
+
+    return surveys;
   }
 
   async findByTitle(title: string): Promise<Survey> {
