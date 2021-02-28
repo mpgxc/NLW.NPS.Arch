@@ -23,6 +23,11 @@ yarn add @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-confi
 yarn eslint --init
 ```
 
+### Diagrama ER
+
+![image](diagrama.png)
+
+### Arquitetura
 ```sh
 ├── Core
 │   ├── Controller.ts
@@ -40,8 +45,8 @@ yarn eslint --init
 │       ├── App.ts
 │       ├── Factories
 │       │   └── Controllers
+│       │       ├── index.ts  
 │       │       ├── AuthenticateUserControllerFactory.ts
-│       │       ├── index.ts
 │       │       ├── ListSurveyControllerFactory.ts
 │       │       ├── RegisterSurveyControllerFactory.ts
 │       │       └── RegisterUserControllerFactory.ts
@@ -73,27 +78,7 @@ yarn eslint --init
 │   │           ├── RegisterUserDTO.ts
 │   │           └── RegisterUser.ts
 │   └── Surveys
-│       ├── Domain
-│       │   └── Survey
-│       │       └── Entity
-│       │           ├── index.ts
-│       │           └── Survey.ts
-│       ├── Repositories
-│       │   ├── implementations
-│       │   │   ├── SurveyMemoryRepository.ts
-│       │   │   └── SurveyRepository.ts
-│       │   ├── index.ts
-│       │   └── ISurveyRepository.ts
-│       └── UseCases
-│           ├── ListSurvey
-│           │   ├── index.ts
-│           │   ├── ListServeyController.ts
-│           │   └── ListSurvey.ts
-│           └── RegisterSurvey
-│               ├── index.ts
-│               ├── RegisterSurveyController.ts
-│               ├── RegisterSurveyDTO.ts
-│               └── RegisterSurvey.ts
+│   ...
 └── @types
     └── express.d.ts
 ```
