@@ -1,7 +1,4 @@
-type IHttpResponse = {
+export type HttpResponse = {
   statusCode: number;
   body: unknown;
 };
-
-class HttpResponse<IHttpResponse> {}
-export { HttpResponse };
